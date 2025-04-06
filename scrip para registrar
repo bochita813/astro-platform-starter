@@ -1,0 +1,10 @@
+document.getElementById('form-registro').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Capturar datos del formulario
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  // En una etapa inicial, mostramos un mensaje simple
+  alert(`¡Gracias por registrarte, ${nombre}! Pronto recibirás más información.`);
+  
+  // Aquí se integrará la llamada al backend para guardar el usuario
+});
