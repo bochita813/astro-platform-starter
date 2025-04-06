@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicia Sesión - Plataforma Empleabilidad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Inicia Sesión</h1>
+  </header>
+  
+  <section class="login-form">
+    <form id="form-login">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit" class="btn">Iniciar Sesión</button>
+    </form>
+  </section>
+  
+  <footer class="footer">
+    <p>&copy; 2025 Plataforma Empleabilidad. Todos los derechos reservados.</p>
+  </footer>
+  
+  <!-- Agregar los scripts de Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script>
+    // Reemplaza con tu propia configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "tu-proyecto.firebaseapp.com",
+      projectId: "tu-proyecto",
+      storageBucket: "tu-proyecto.appspot.com",
+      messagingSenderId: "TU_SENDER_ID",
+      appId: "TU_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+  
+  <script src="login.js"></script>
+</body>
+</html>
